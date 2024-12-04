@@ -2,6 +2,9 @@
     background-color: deeppink;
     border-radius: 50pt;
     max-width: 400pt;
+    flex: 1;
+    margin: 5pt;
+
 }
 
 h1 {
@@ -16,15 +19,21 @@ p {
 
 #item_img {
     max-width: 200pt;
-    min-width: 50pt;
+    min-width: 100pt;
     max-height: 200pt;
     min-height: 50pt;
 }
 
 a {
     background-color: aqua;
-    padding: 20pt;
-    color: blueviolet;
-    
+    padding: 10pt;
+    color:deepskyblue;
     font-weight: 900;
+    font-size: 5pt;
+    margin: 2pt;
+}
+
+#items_div {
+    display: flex;
+    flex-wrap: wrap;
 }
