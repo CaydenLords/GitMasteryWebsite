@@ -1,0 +1,30 @@
+#item_div {
+    background-color: deeppink;
+    border-radius: 50pt;
+    max-width: 400pt;
+}
+
+h1 {
+    font-family: fantasy;
+    text-align: center;
+}
+
+p {
+    padding: 1pt;
+    color: greenyellow;
+}
+
+#item_img {
+    max-width: 200pt;
+    min-width: 50pt;
+    max-height: 200pt;
+    min-height: 50pt;
+}
+
+a {
+    background-color: aqua;
+    padding: 20pt;
+    color: blueviolet;
+    
+    font-weight: 900;
+}
