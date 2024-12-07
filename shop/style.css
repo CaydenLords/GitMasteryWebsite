@@ -1,0 +1,83 @@
+#item_div {
+    background-color: deeppink;
+    border-radius: 50pt;
+    max-width: 400pt;
+    flex: 1;
+    margin: 5pt;
+}
+
+h1 {
+    font-family: fantasy;
+    text-align: center;
+}
+
+h3 {
+    padding: 2pt;
+    color: greenyellow;
+}
+
+h4 {
+    padding: 10pt;
+    color: darkorange;
+}
+
+p {
+    padding: 1pt;
+    color: greenyellow;
+}
+
+#item_img {
+    max-width: 200pt;
+    min-width: 100pt;
+    max-height: 200pt;
+    min-height: 50pt;
+}
+
+a {
+    background-color: aqua;
+    padding: 10pt;
+    color:deepskyblue;
+    font-weight: 900;
+    font-size: 5pt;
+    margin: 2pt;
+}
+
+#items_div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkout-link { /* Thank you, ChatGPT */
+    position: absolute; /* Allows movement via left and top */
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+    min-width: 100pt;
+    min-height: 20pt;
+    text-align: center;
+    font-size: large;
+
+    /* Rainbow Background Animation */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow);
+    background-size: 400% 400%; /* Makes animation smoother */
+    animation: rainbow 2s infinite linear, bounce 0.5s infinite ease-in-out;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Bounce effect */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-75px); }
+}
+
+#margo {
+    background-color: transparent;
+}

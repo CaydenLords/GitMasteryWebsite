@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "/style.css">
+    <link rel = "stylesheet" type = "text/css" href = "/shop/style.css">
+    <title>Shop Here!!!</title>
+</head>
+<body>
+    <header>
+        <header>
+            <img id = "header_img" src = "/gameReview/images/WebsiteLogo.png">
+            <h3 id = "website_header">SHOP CHECKOUT</h3>
+            <div>
+                <h4 id = "article_header"><a href="/shop/index.html">Homepage</a></h4>
+                <h4 id = "shop_button"><a href="/index.html">Shop!</a></h4>
+            </div>
+        </header>
+    </header>
+
+    <div>
+        <a class="checkout-link" id="checkoutLink" href="/index.html">PURCHASE NOW!!!</a>
+    </div>
+
+</body>
+
+<script>
+    const link = document.getElementById('checkoutLink');
+  
+    link.addEventListener('mouseenter', () => {
+      // Get viewport dimensions
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+  
+      // Calculate random new position
+      const newLeft = Math.random() * (viewportWidth - link.offsetWidth);
+      const newTop = Math.random() * (viewportHeight - link.offsetHeight);
+  
+      // Set new position
+      link.style.left = `${newLeft}px`;
+      link.style.top = `${newTop}px`;
+    });
+  </script>
+
+</html>
