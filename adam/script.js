@@ -4,6 +4,11 @@ const toggleBtn = document.getElementById('toggle-btn');
 const randomColors = ['red', 'lime', 'blue', 'yellow', 'purple', 'orange', 'pink', 'cyan'];
 const randomFonts = ['Comic Sans MS', 'Papyrus', 'Impact', 'Courier New', 'Brush Script MT', 'Verdana', 'Times New Roman'];
 
+// Home button functionality
+document.getElementById('home-btn').addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
+
 toggleBtn.addEventListener('click', () => {
   const body = document.body;
   const header = document.querySelector('header');
@@ -36,7 +41,7 @@ toggleBtn.addEventListener('click', () => {
     body.classList.add('shake'); // Add the shake class to trigger the animation
     setTimeout(() => {
       body.classList.remove('shake'); // Remove the shake class after 1 second
-    }, 1000); // 1000ms = 1 second
+    }, 1000);
   } else {
     // Reset button
     toggleBtn.textContent = 'Switch to Bad Design';
