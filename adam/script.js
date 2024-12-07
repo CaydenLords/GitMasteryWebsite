@@ -37,10 +37,10 @@ toggleBtn.addEventListener('click', () => {
     footer.style.backgroundColor = getRandomValue(randomColors);
     footer.style.color = getRandomValue(randomColors);
 
-    // Add shaking effect
-    body.classList.add('shake'); // Add the shake class to trigger the animation
+    //shaking effect
+    body.classList.add('shake'); //Add the shake class
     setTimeout(() => {
-      body.classList.remove('shake'); // Remove the shake class after 1 second
+      body.classList.remove('shake'); //Remove the shake class after 1 second
     }, 1000);
   } else {
     // Reset button
@@ -65,7 +65,7 @@ function getRandomValue(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-// Helper function to get a random font size
+//get a random font size
 function getRandomSize() {
-  return Math.floor(Math.random() * 40) + 10; // Random size between 10px and 50px
+  return Math.floor(Math.random() * 40) + 10; 
 }
