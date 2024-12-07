@@ -1,60 +1,72 @@
+
+/* Good Design */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background: #35424a;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    background-color: #0078d7;
     color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav {
-    background: #e8491d;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
+    padding: 10px 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.container {
-    background: white;
-    border: 1px solid #ccc;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header button {
+    background-color: white;
+    color: #0078d7;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
     border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-footer {
+    transition: all 0.3s ease;
+  }
+  
+  header button:hover {
+    background-color: #005bb5;
+    color: white;
+  }
+  
+  main {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  main h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  main p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  footer {
+    background-color: #0078d7;
+    color: white;
     text-align: center;
     padding: 10px 0;
-    background: #35424a;
-    color: white;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
-}
+  }
+
+  /* Shaking effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  body.shake {
+    animation: shake 0.5s ease-in-out;
+  }
