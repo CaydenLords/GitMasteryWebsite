@@ -4,12 +4,16 @@
     max-width: 400pt;
     flex: 1;
     margin: 5pt;
-
 }
 
 h1 {
     font-family: fantasy;
     text-align: center;
+}
+
+h3 {
+    padding: 2pt;
+    color: greenyellow;
 }
 
 p {
@@ -44,7 +48,7 @@ a {
     padding: 10px 20px;
     color: white;
     text-decoration: none;
-    border: 2px solid black;
+    border: 2px solid yellow;
     border-radius: 5px;
     transition: transform 0.2s ease;
     min-width: 100pt;
@@ -53,7 +57,7 @@ a {
     font-size: large;
 
     /* Rainbow Background Animation */
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow);
     background-size: 400% 400%; /* Makes animation smoother */
     animation: rainbow 5s infinite linear;
 }
