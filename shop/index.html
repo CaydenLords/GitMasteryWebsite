@@ -1,0 +1,108 @@
+<!DOCTYPE html> <!--index.html-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "/style.css">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <title>Shop Here!!!</title>
+</head>
+<body>
+    <header>
+        <header>
+            <img id = "header_img" src = "/gameReview/images/WebsiteLogo.png">
+            <h1 id = "website_header">SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP</h1>
+            <div>
+                <h2 id = "article_header"><a href="/index.html">Homepage</a></h2>
+                <h2 id = "shop_button" class="trigger-link"><a href="#">Shop!</a></h2>
+            </div>
+        </header>
+    </header>
+
+    <div id="items_div">
+
+        <div id="item_div">
+            <h1>candy!!!!?</h1>
+            <p>its good! buy now! not expired!</p>
+            <img id="item_img" src="images/candy.png"/>
+            <a href="#" class="trigger-link">BUY ME!!!!</a>
+        </div>
+
+        <div id="item_div">
+            <h1>good condition car!</h1>
+            <p>its good! buy now! 40 000 miles</p>
+            <img id="item_img" src="images/car.png"/>
+            <a href="#" class="trigger-link">BUY ME!!!!</a>
+        </div>
+       
+        <div id="item_div">
+            <h1>grandma margo</h1>
+            <p>up for adoption</p>
+            <p>disclaimer: needs fermented grape juice to function</p>
+
+            <a id="margo" href="https://www.youtube.com/watch?v=csn2CIWPVbM&pp=ygUSdHdvIHNob3RzIG9mIHZvZGth">
+                <img id="item_img" src="images/margo.jpg"/>
+            </a>
+
+            <a href="#" class="trigger-link">ADOPT????</a>
+        </div>
+
+        <div id="item_div">
+            <h1>vanity</h1>
+            <h3>NOT cursed</h3>
+            <p>we are not liable for hauntings/curses/etc.</p>
+            <img id="item_img" src="images/cursed_vanity.png"/>
+            <a href="#" class="trigger-link">BUY ME!!!!</a>
+        </div>
+
+    </div>
+<footer>
+    <h4>Elijah Dodge may or may not be proud of his work.</h3>
+</footer>
+</body>
+
+<script>
+    // Select all elements with the class 'trigger-link'
+    const triggerLinks = document.querySelectorAll('.trigger-link');
+
+    // Loop through all trigger links and attach event listeners
+    triggerLinks.forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault(); // Prevent default link behavior
+
+            // Fetch the rainbow button HTML
+            const response = await fetch('rainbowButton.html');
+            const buttonHTML = await response.text();
+
+            // Create a container for the new button
+            const container = document.createElement('div');
+            container.innerHTML = buttonHTML;
+
+            // Append the new button to the body
+            const button = container.querySelector('.checkout-link');
+            document.body.appendChild(button);
+
+            // Position the button randomly
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const newLeft = Math.random() * (viewportWidth - button.offsetWidth);
+            const newTop = Math.random() * (viewportHeight - button.offsetHeight);
+
+            button.style.position = 'absolute'; // Ensure it's absolutely positioned
+            button.style.left = `${newLeft}px`;
+            button.style.top = `${newTop}px`;
+
+            // Add the hover effect to make the button move
+            button.addEventListener('mouseenter', () => {
+                const newLeft = Math.random() * (viewportWidth - button.offsetWidth);
+                const newTop = Math.random() * (viewportHeight - button.offsetHeight);
+
+                button.style.left = `${newLeft}px`;
+                button.style.top = `${newTop}px`;
+            });
+        });
+    });
+</script>
+
+
+</html>
